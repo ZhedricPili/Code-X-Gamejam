@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Sphere").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(FOVRoutine());
     }
@@ -48,7 +48,6 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         //Check for sight and attack range
-        //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInAttackRange && canSeePlayer == false)
@@ -62,13 +61,13 @@ public class EnemyAI : MonoBehaviour
             Invoke(nameof(WallBump), 5f);
         }
 
-        else if (!playerInAttackRange && canSeePlayer == true)
+        if (!playerInAttackRange && canSeePlayer)
         {
             ChasePlayer();
         }
-        else if (playerInSightRange && canSeePlayer == true)
+        else if (playerInAttackRange && canSeePlayer)
         {
-            ChasePlayer();
+            AttackPlayer();
         }
     }
 
@@ -128,16 +127,15 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
+        Debug.Log("Attacking Player");
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
-            ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            ///Attack code here preferably animation
+            ///
             ///End of attack code
 
             alreadyAttacked = true;
@@ -196,15 +194,28 @@ public class EnemyAI : MonoBehaviour
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                {
+                    Debug.Log("Player Seen");
                     canSeePlayer = true;
+                }
+
                 else
+
+                {
                     canSeePlayer = false;
+                }
+
             }
             else
+            {
                 canSeePlayer = false;
+            }
+
         }
         else if (canSeePlayer)
+        {
             canSeePlayer = false;
+        }
     }
 
 }
