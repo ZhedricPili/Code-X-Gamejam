@@ -13,6 +13,21 @@ public class EnemyAI : MonoBehaviour
 
     public float health;
 
+<<<<<<< HEAD
+    //Line of Sight
+    public float radius;
+    [Range(0, 360)]
+    public float angle;
+
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
+
+    public bool canSeePlayer;
+
+
+
+=======
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -31,25 +46,44 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Sphere").transform;
         agent = GetComponent<NavMeshAgent>();
+<<<<<<< HEAD
+        StartCoroutine(FOVRoutine());
+=======
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
     }
 
     private void Update()
     {
         //Check for sight and attack range
+<<<<<<< HEAD
+        //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        if (!playerInAttackRange && canSeePlayer == false)
+=======
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange)
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
         {
             Patrolling();
             Invoke(nameof(WallBump), 5f);
         } 
 
+<<<<<<< HEAD
+        else if (!playerInAttackRange && canSeePlayer == true) 
+        {
+            ChasePlayer();
+        }
+        else if (playerInSightRange && canSeePlayer == true)
+=======
         else if (playerInSightRange && !playerInAttackRange) 
         {
             ChasePlayer();
         }
         else if (playerInAttackRange && playerInSightRange) 
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
         {
             AttackPlayer();
         }
@@ -153,4 +187,43 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
+<<<<<<< HEAD
+
+    private IEnumerator FOVRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+        while (true)
+        {
+            yield return wait;
+            FieldOfViewCheck();
+        }
+    }
+
+    private void FieldOfViewCheck()
+    {
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+
+        if (rangeChecks.Length != 0)
+        {
+            Transform target = rangeChecks[0].transform;
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    canSeePlayer = true;
+                else
+                    canSeePlayer = false;
+            }
+            else
+                canSeePlayer = false;
+        }
+        else if (canSeePlayer)
+            canSeePlayer = false;
+    }
+=======
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
 }
