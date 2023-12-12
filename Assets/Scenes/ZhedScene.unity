@@ -132,7 +132,11 @@ GameObject:
   - component: {fileID: 70745015}
   - component: {fileID: 70745014}
   - component: {fileID: 70745018}
+<<<<<<< HEAD
+  m_Layer: 8
+=======
   m_Layer: 6
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +260,11 @@ GameObject:
   - component: {fileID: 176758064}
   - component: {fileID: 176758063}
   - component: {fileID: 176758067}
+<<<<<<< HEAD
+  m_Layer: 8
+=======
   m_Layer: 6
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +481,11 @@ GameObject:
   - component: {fileID: 766059590}
   - component: {fileID: 766059589}
   - component: {fileID: 766059593}
+<<<<<<< HEAD
+  m_Layer: 8
+=======
   m_Layer: 6
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +574,11 @@ Transform:
   m_GameObject: {fileID: 766059588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 11.47, y: -0.16932923, z: 11.004152}
+=======
   m_LocalPosition: {x: 9.83172, y: -0.16932923, z: 11.004152}
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_LocalScale: {x: 5.3489, y: 2.1251996, z: 2.00622}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -885,7 +901,11 @@ Transform:
   m_GameObject: {fileID: 1039896112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -8, y: 0.44, z: 6.71}
+=======
   m_LocalPosition: {x: -24.18, y: 0.44, z: -12.29}
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -934,6 +954,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 5
+<<<<<<< HEAD
+  radius: 10
+  angle: 65
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  canSeePlayer: 0
+=======
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   walkPoint: {x: 5, y: 5, z: 5}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
@@ -1094,7 +1126,11 @@ GameObject:
   - component: {fileID: 1266026162}
   - component: {fileID: 1266026161}
   - component: {fileID: 1266026165}
+<<<<<<< HEAD
+  m_Layer: 8
+=======
   m_Layer: 6
+>>>>>>> 7880eec7f83a45e2c754b74295368307113affa5
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
