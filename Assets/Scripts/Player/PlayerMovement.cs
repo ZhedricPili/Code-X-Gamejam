@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private CharacterController _playerController;
-    [SerializeField]
-    float speed;
+    [Tooltip("How fast player go brrrr")]
+    [SerializeField] float speed;
 
     void Start()
     {   
