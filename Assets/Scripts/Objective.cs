@@ -10,8 +10,12 @@ public class Objective : MonoBehaviour
 
         if(playerInventory != null)
         {
-            playerInventory.ObjectiveCollector();
-            gameObject.SetActive(false);
+            if (other.CompareTag("Player"))
+            {
+                playerInventory.ObjectiveCollector();
+                gameObject.SetActive(false);
+            }
+
         }
     }
 }
