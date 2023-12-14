@@ -5,32 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    //as per kyle's request made a variable to add whatever gameobject they please
-    [Tooltip("Place the Option gameobject here")]
-    public GameObject optionsScreen;
-    
-    void Start()
-    {
-        optionsScreen.SetActive(false);
-    }
+
+    [Tooltip("Place Corresponding Screen Game Object")]
+    public GameObject screenObject;
     
     public void GameStarter()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    public void OptionsEnabler()
+    [Tooltip("Enables the Object placed inside")]
+    public void Enabler(GameObject gameScreen)
     {
-        optionsScreen.SetActive(true);
+        gameScreen.SetActive(true);
     }
-
+    public void Disabler(GameObject gameScreen)
+    {
+        gameScreen.SetActive(false);
+    }
     public void GameEnder()
     {
         Application.Quit();
         Debug.Log("Game Over     SNAKKEEEEE");
-    }
-    public void OptionDisabler()
-    {
-        optionsScreen.SetActive(false);
     }
 }
