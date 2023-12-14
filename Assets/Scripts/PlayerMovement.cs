@@ -17,6 +17,5 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 
-        _playerController.Move(move * Time.deltaTime * speed);    
-    }
+        _playerController.Move(move * Time.deltaTime * speed);    }
 }
