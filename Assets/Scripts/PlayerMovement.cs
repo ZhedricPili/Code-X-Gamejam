@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float speed;
     void Start()
-    {   
+    {
+       
        _playerController = GetComponent<CharacterController>(); 
     }
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MovementFucntion();
+   
     }
     public void MovementFucntion()
     {
