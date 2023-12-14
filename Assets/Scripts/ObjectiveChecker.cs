@@ -7,14 +7,11 @@ using UnityEngine.SceneManagement;
 public class ObjectiveChecker : MonoBehaviour
 {
     public int winAmount;
-    [Tooltip("Place WinScreen here")]
-    public GameObject winScreen;
     PlayerInventory playerInventory;
     // Start is called before the first frame update
     void Start()
     {
         playerInventory = GetComponent<PlayerInventory>();
-        winScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,7 +24,7 @@ public class ObjectiveChecker : MonoBehaviour
     if(playerInventory.objectiveCounter == winAmount)
         {
             Debug.Log("winner");
-            winScreen.SetActive(true);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
