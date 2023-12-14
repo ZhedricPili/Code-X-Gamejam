@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
     public NavMeshAgent agent;
 
     public Transform player;
@@ -128,6 +127,7 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
+        Debug.Log("Attacking Player");
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
@@ -135,8 +135,7 @@ public class EnemyAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here preferably animation
-            Debug.Log("Ikaw ay na lose");
-            Time.timeScale = 0f;
+            ///
             ///End of attack code
 
             alreadyAttacked = true;
@@ -196,6 +195,7 @@ public class EnemyAI : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
+                    Debug.Log("Player Seen");
                     canSeePlayer = true;
                 }
 

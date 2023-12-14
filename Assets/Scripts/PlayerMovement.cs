@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     private CharacterController _playerController;
     [SerializeField]
     float speed;
-
     void Start()
     {   
-       _playerController = GetComponent<CharacterController>();
+       _playerController = GetComponent<CharacterController>(); 
     }
 
     // Update is called once per frame
