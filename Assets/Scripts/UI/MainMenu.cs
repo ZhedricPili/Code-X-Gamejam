@@ -14,18 +14,23 @@ public class MainMenuManager : MonoBehaviour
         optionsScreen.SetActive(false);
     }
     
-    public void GameStart()
+    public void GameStarter()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Options()
+    public void OptionsEnabler()
     {
         optionsScreen.SetActive(true);
     }
 
-    public void GameEnd()
+    public void GameEnder()
     {
         Application.Quit();
+        Debug.Log("Game Over     SNAKKEEEEE");
+    }
+    public void OptionDisabler()
+    {
+        optionsScreen.SetActive(false);
     }
 }
