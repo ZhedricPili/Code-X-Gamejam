@@ -27,11 +27,11 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Awake()
+    /*private void Awake()
     {
-        player = GameObject.Find("Sphere").transform;
+        player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
-    }
+    }*/
 
     private void Update()
     {
