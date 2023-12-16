@@ -9435,14 +9435,14 @@ RectTransform:
   m_GameObject: {fileID: 1603141311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 187}
-  m_LocalScale: {x: 1.601, y: 1.601, z: 1.601}
+  m_LocalScale: {x: 1.9972473, y: 1.9972473, z: 1.9972473}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 817643310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 798, y: 301}
+  m_AnchoredPosition: {x: 798, y: 325}
   m_SizeDelta: {x: 696.0069, y: 79.7605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603141313
@@ -9467,8 +9467,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I Was Reborn Into Another World And I Need To Collect Books For Some Reason
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e5e624e7792afce4aa90ff982027c72f, type: 2}
-  m_sharedMaterial: {fileID: -3089831191416528504, guid: e5e624e7792afce4aa90ff982027c72f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50fa192d163584d4a9ec8826a7a83da2, type: 2}
+  m_sharedMaterial: {fileID: -2421690533917340869, guid: 50fa192d163584d4a9ec8826a7a83da2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
