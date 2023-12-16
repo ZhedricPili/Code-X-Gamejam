@@ -1,24 +1,19 @@
 fileFormatVersion: 2
-guid: c7b6c943962e7ea47899572b0cfc4ae8
+guid: 31d5726c321f0544c8a3a77a61b38111
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 7b284ca898f8e674dba38f25a5b3d00d, type: 2}
+      name: 360_F_106102426_m9E6wmPCn1vdLqkBckxpd9SJXPN5K51x
+    second: {fileID: 2800000, guid: 06bcef6dc96a4734ca415d76e2d58715, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: a8027f1a51aadd14988045ec3c8b94e6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: 317fc08b35102254fac0e172a3122138, type: 2}
+      name: Shelf_Texture
+    second: {fileID: 2800000, guid: 678bbcc03ae062745868e746a9654b5d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
