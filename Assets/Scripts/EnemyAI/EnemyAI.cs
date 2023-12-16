@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    public Animator animator;
 
     public NavMeshAgent agent;
 
@@ -13,6 +14,8 @@ public class EnemyAI : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
+
+    Collider wallcollider;
 
     //Line of Sight
     public float radius;
@@ -41,6 +44,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
+        wallcollider = GetComponent<Collider>();
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(FOVRoutine());
@@ -48,6 +52,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+
         //Check for sight and attack range
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -59,7 +64,7 @@ public class EnemyAI : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange)
         {
             Patrolling();
-            Invoke(nameof(WallBump), 5f);
+            //Invoke(nameof(WallBump), 5f);
         }
 
         if (!playerInAttackRange && canSeePlayer)
@@ -81,6 +86,7 @@ public class EnemyAI : MonoBehaviour
 
         if (walkPointSet)
         {
+            animator.SetBool("isWalking", true);
             agent.SetDestination(walkPoint);
         }
 
@@ -92,7 +98,8 @@ public class EnemyAI : MonoBehaviour
         if (distanceToWalkPoint.magnitude < 1f)
         {
             walkPointSet = false;
-            CancelInvoke();
+            animator.SetBool("isWalking", false);
+            Invoke(nameof(WallBump), 5f);
         }
 
 
@@ -100,7 +107,7 @@ public class EnemyAI : MonoBehaviour
 
     private void WallBump()
     {
-        Debug.Log("5 seconds have passed");
+        animator.SetBool("isWalking", false);
         walkPointSet = false;
         CancelInvoke();
     }
@@ -159,7 +166,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void DestroyEnemy()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); 
     }
 
     private void OnDrawGizmosSelected()
@@ -215,6 +222,15 @@ public class EnemyAI : MonoBehaviour
         else if (canSeePlayer)
         {
             canSeePlayer = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Obstacle"))
+        {
+            Debug.Log("Obstacle Hit");
+            WallBump();
         }
     }
 
