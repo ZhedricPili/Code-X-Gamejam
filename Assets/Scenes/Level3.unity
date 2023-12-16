@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 22008976}
   - component: {fileID: 22008975}
   - component: {fileID: 22008974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7972,7 +7972,7 @@ GameObject:
   - component: {fileID: 972819776}
   - component: {fileID: 972819775}
   - component: {fileID: 972819774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10780,7 +10780,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d535e46494ef53c4d9fa1d510905897f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: b2e29f2cb56fb0e42a404265b398453b, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1277646644
 Transform:
@@ -11664,7 +11664,7 @@ GameObject:
   - component: {fileID: 1356663503}
   - component: {fileID: 1356663502}
   - component: {fileID: 1356663501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13734,7 +13734,7 @@ GameObject:
   - component: {fileID: 1574362961}
   - component: {fileID: 1574362960}
   - component: {fileID: 1574362959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17487,7 +17487,7 @@ GameObject:
   - component: {fileID: 2060923122}
   - component: {fileID: 2060923121}
   - component: {fileID: 2060923120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
