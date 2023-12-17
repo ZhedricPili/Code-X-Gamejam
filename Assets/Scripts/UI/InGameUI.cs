@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -74,8 +75,13 @@ public class InGameUI : MonoBehaviour
 
     public void Retry()
     {
-        //Time.timeScale = 1;
         isPlayerDead = false;
         SceneManager.LoadScene("Level1");
+    }
+
+    public void BackToMenu()
+    {
+        isPlayerDead = false;
+        SceneManager.LoadScene("MainMenu");
     }
 }
