@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerObject;
     public Transform cam;
     public float turnSmoothTime = 0.1f;
-
     private float _turnSmoothVelocity;
+
     Animator _animator;
     string _currentState;    
     const string playerIdle = "Idle";
     const string playerRun = "Running";
+
+
 
     
 
@@ -34,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovementFucntion(); 
+        MovementFucntion();
     }
     public void MovementFucntion()
     {
