@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Objective : MonoBehaviour
 {
+
+
     private void OnTriggerEnter(Collider other)
     {
-        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+        PlayerInventory _playerInventory = other.GetComponent<PlayerInventory>();
+        
 
-        if(playerInventory != null)
+        if(_playerInventory != null)
         {
             if (other.CompareTag("Player"))
             {
-                playerInventory.ObjectiveCollector();
+                _playerInventory.ObjectiveCollector();
                 gameObject.SetActive(false);
             }
+            
 
         }
     }

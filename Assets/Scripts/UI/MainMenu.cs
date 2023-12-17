@@ -8,6 +8,10 @@ public class MainMenuManager : MonoBehaviour
 
     [Tooltip("Place Corresponding Screen Game Object")]
     public GameObject screenObject;
+    public void Start()
+    {
+        Time.timeScale = 1f;
+    }
     
     public void GameStarter()
     {
