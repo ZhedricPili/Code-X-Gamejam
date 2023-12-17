@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         wallcollider = GetComponent<Collider>();
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("FInalPlayer").transform;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(FOVRoutine());
     }
