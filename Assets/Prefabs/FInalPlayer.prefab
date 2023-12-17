@@ -836,6 +836,7 @@ GameObject:
   - component: {fileID: 7299861162114228894}
   - component: {fileID: 8576339424865541936}
   - component: {fileID: 7716961413539660203}
+  - component: {fileID: 2636958836328145447}
   m_Layer: 3
   m_Name: FInalPlayer
   m_TagString: Player
@@ -1069,6 +1070,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a0e2ae0b3bd65643b2954c727d01251, type: 3}
   - {fileID: 8300000, guid: 4f8b40f9012208f49985769f2508df0e, type: 3}
   _collectSounds: []
+--- !u!114 &2636958836328145447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304586842507479125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 4
+  outlineColor: {r: 0.9686275, g: 0.6666667, b: 0.3529412, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &568305193306949335
 PrefabInstance:
   m_ObjectHideFlags: 0
