@@ -19,4 +19,8 @@ public class SoundManager : MonoBehaviour
     {
         get { return _footstepsSource; }
     }
+    public List<AudioClip> FootstepSounds
+    {
+        get { return _footstepSounds; }
+    }
 }
