@@ -1,35 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameUI : MonoBehaviour
 {
     [SerializeField] private GameObject[] _overlayObjects; //In-game Interface, BG, Pause Overlay, Game Overlay
-    public static bool gameIsPaused;
+    public static bool gameIsPaused,isPlayerDead;
 
-    void Start()
+    void Awake()
     {
-
+        ResumeGame();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (isPlayerDead != true)
         {
-            gameIsPaused = !gameIsPaused;
-            
-            if(gameIsPaused == true)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseGame();
+                gameIsPaused = !gameIsPaused;
+
+                if (gameIsPaused == true)
+                {
+                    PauseGame();
+                }
+                else if (gameIsPaused == false)
+                {
+                    ResumeGame();
+                }
             }
-            else if (gameIsPaused == false)
-            {
-                ResumeGame();
-            }            
         }
     }
 
-    
+    void FixedUpdate()
+    {
+        if(isPlayerDead == true)
+        {
+            GameOver();
+        }
+    }
+
+
 
     public void PauseGame()
     {
@@ -58,5 +70,12 @@ public class InGameUI : MonoBehaviour
         _overlayObjects[0].SetActive(false);
         _overlayObjects[1].SetActive(true);
         _overlayObjects[3].SetActive(true);
+    }
+
+    public void Retry()
+    {
+        //Time.timeScale = 1;
+        isPlayerDead = false;
+        SceneManager.LoadScene("Level1");
     }
 }

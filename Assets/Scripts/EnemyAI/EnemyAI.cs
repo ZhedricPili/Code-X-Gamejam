@@ -143,10 +143,11 @@ public class EnemyAI : MonoBehaviour
         {
             ///Attack code here preferably animation
             Debug.Log("Ikaw ay na lose");
-            Time.timeScale = 0f;
+
             ///End of attack code
 
             alreadyAttacked = true;
+            InGameUI.isPlayerDead = alreadyAttacked;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
