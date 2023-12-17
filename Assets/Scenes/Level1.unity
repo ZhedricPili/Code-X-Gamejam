@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8d9c1afb6b6db8d4cb117cee3b431be5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 6aa2584fb081501439f9c44a92ddccca, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11545,6 +11545,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf489554462856a4f8888d0e7ec1d05e, type: 3}
   m_PrefabInstance: {fileID: 960201859}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &961292304 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9070648371189513513, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+  m_PrefabInstance: {fileID: 2053548828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &970629105
 GameObject:
   m_ObjectHideFlags: 0
@@ -13026,6 +13031,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025122739}
   m_Mesh: {fileID: -8678823145569952518, guid: cf489554462856a4f8888d0e7ec1d05e, type: 3}
+--- !u!82 &1027096540 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5439809734538372184, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+  m_PrefabInstance: {fileID: 2053548828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1038853619
 GameObject:
   m_ObjectHideFlags: 0
@@ -19649,6 +19659,8 @@ GameObject:
   - component: {fileID: 1598158558}
   - component: {fileID: 1598158557}
   - component: {fileID: 1598158556}
+  - component: {fileID: 1598158560}
+  - component: {fileID: 1598158559}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -19764,6 +19776,83 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1598158559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598158554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 433f65bb2f699e8479ecd244a6fbe882, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &1598158560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598158554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1598158555}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1610170526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22034,11 +22123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5114259729472847333, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042991823
+      value: 0.000000004299184
       objectReference: {fileID: 0}
     - target: {fileID: 5114259729472847333, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.4403412e-10
+      value: -1.4403419e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5200881922053583175, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
       propertyPath: m_Layer
@@ -22167,6 +22256,10 @@ PrefabInstance:
     - target: {fileID: 8436277642099666140, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576339424865541936, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8587267983937314915, guid: 3393f7af8a5ee074bb7222e06f98751e, type: 3}
       propertyPath: m_Layer
@@ -26097,6 +26190,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: _mainSource
+      value: 
+      objectReference: {fileID: 961292304}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: _footstepsSource
+      value: 
+      objectReference: {fileID: 1027096540}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: _footstepSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: '_footstepSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8678388f341d9384f91140b039a7eada, type: 3}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: '_footstepSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8820f05f430d51749a8f4a54cfb5c608, type: 3}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: '_footstepSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b4ddb2571e25724c9cd3075653aa369, type: 3}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: '_footstepSounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a0e2ae0b3bd65643b2954c727d01251, type: 3}
+    - target: {fileID: 741909785510601103, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: '_footstepSounds.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f8b40f9012208f49985769f2508df0e, type: 3}
     - target: {fileID: 1485113897103259882, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -26160,6 +26285,14 @@ PrefabInstance:
     - target: {fileID: 3928769544208679888, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439809734538372184, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070648371189513513, guid: fb089f5c6b623b14aa576deeb6807497, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
