@@ -5,13 +5,13 @@ using UnityEngine;
 public class FootstepManager : MonoBehaviour
 {
     [SerializeField] private SoundManager _characterSoundManager;
-    private SoundManager _soundManager;
+    //[SerializeField] private SoundManager _soundManager;
     private List<AudioClip> footstepSounds;
     // Start is called before the first frame update
     void Start()
     {
-        _soundManager = GetComponent<SoundManager>();
-        footstepSounds = _soundManager.FootstepSounds;
+        //_soundManager = GetComponent<SoundManager>();
+        footstepSounds = _characterSoundManager.FootstepSounds;
     }
 
     // Update is called once per frame
@@ -22,6 +22,6 @@ public class FootstepManager : MonoBehaviour
 
     public void PlayFootsteps()
     {
-        _characterSoundManager.RandomizeSound(footstepSounds, _soundManager.MainSource);
+        _characterSoundManager.RandomizeSound(footstepSounds, _characterSoundManager.MainSource);
     }
 }
