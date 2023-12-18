@@ -64,7 +64,7 @@ public class EnemyAI : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange)
         {
             Patrolling();
-            //Invoke(nameof(WallBump), 5f);
+            Invoke(nameof(WallBump), 5f);
         }
 
         if (!playerInAttackRange && canSeePlayer)
