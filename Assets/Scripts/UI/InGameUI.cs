@@ -47,7 +47,7 @@ public class InGameUI : MonoBehaviour
     public void PauseGame()
     {
         Debug.Log("Paused");
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         gameIsPaused = true;
 
         _overlayObjects[0].SetActive(false);
@@ -67,7 +67,7 @@ public class InGameUI : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         _overlayObjects[0].SetActive(false);
         _overlayObjects[1].SetActive(true);
         _overlayObjects[3].SetActive(true);
@@ -77,6 +77,7 @@ public class InGameUI : MonoBehaviour
     {
         isPlayerDead = false;
         SceneManager.LoadScene("Level1");
+        Time.timeScale = 1f;
     }
 
     public void BackToMenu()

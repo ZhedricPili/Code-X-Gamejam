@@ -12,6 +12,12 @@ public class PlayerInventory : MonoBehaviour
     public int objectiveCounter {get; private set;}
     public TextMeshProUGUI scoreText;
 
+    public delegate void BookTaken();
+    public static event BookTaken onBookTaken;
+
+    public void Start()
+    {
+    }
     public void Update()
     {
         if (objectiveCounter == 5)
@@ -21,10 +27,17 @@ public class PlayerInventory : MonoBehaviour
             objectiveCounter = 0;
         }
         scoreText.text = objectiveCounter.ToString();
+
+
     }
 
     public void ObjectiveCollector()
     {
         objectiveCounter++;
+        if (onBookTaken != null)
+        {
+            onBookTaken();
+            Debug.Log("Book Taken");
+        }
     }
 }

@@ -6,6 +6,13 @@ using UnityEngine;
 public class Objective : MonoBehaviour
 {
 
+    public GameObject book;
+
+
+    private void Awake()
+    {
+        book.SetActive(true);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,10 +24,14 @@ public class Objective : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 _playerInventory.ObjectiveCollector();
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
+
+
             
 
         }
     }
+
+
 }
