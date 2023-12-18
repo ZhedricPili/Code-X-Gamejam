@@ -216,9 +216,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc7d976e5a0ed7459fcc4401d18e4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainSource: {fileID: 0}
-  _footstepsSource: {fileID: 0}
-  _footstepSounds: []
+  _mainSource: {fileID: 9070648371189513513}
+  _footstepsSource: {fileID: 5439809734538372184}
+  _footstepSounds:
+  - {fileID: 8300000, guid: 8678388f341d9384f91140b039a7eada, type: 3}
+  - {fileID: 8300000, guid: 8820f05f430d51749a8f4a54cfb5c608, type: 3}
+  - {fileID: 8300000, guid: 7b4ddb2571e25724c9cd3075653aa369, type: 3}
+  - {fileID: 8300000, guid: 6a0e2ae0b3bd65643b2954c727d01251, type: 3}
+  - {fileID: 8300000, guid: 4f8b40f9012208f49985769f2508df0e, type: 3}
   snatchSound: []
 --- !u!82 &9070648371189513513
 AudioSource:
@@ -234,7 +239,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -447,7 +452,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0
